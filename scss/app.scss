@@ -1,0 +1,36 @@
+@import '../bower_components/bootstrap/scss/_functions.scss';
+// required here before variables because.. beta
+@import '../bower_components/bootstrap/scss/_variables.scss';
+@import '../bower_components/bootstrap/scss/mixins/_border-radius.scss';
+
+#cv-app {
+  height: 500px;
+}
+
+h1 {
+  font-family: 'Amatic SC', sans-serif; // overriding Bootstrap with a downloaded font and a fallback
+  color: $indigo;
+  text-align: center;
+}
+
+aside {
+  width: 300px;
+  height: 400px;
+  border-right: 1px $yellow solid;
+  border-bottom: 1px $yellow solid; // TODO: can it be done in a better way? besides a variable
+
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  
+  float: left; // TODO: replace with Grid
+}
+
+#details {
+
+}
+
+footer {
+  text-align: center;
+}
