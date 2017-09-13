@@ -9,6 +9,7 @@
     "sass:build": "npm-run-all -p build-task:*",
     "sass:watch": "chokidar 'scss/**/*.scss' -c 'npm run sass:build'",
     "dev": "npm-run-all -p sass:*",
+    "install": "bower install",
     "build": "npm-run-all -p sass:build",
     "test": "jasmine",
     "start": "http-server ."
@@ -18,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^7.1.4",
+    "bower": "^1.7.10",
     "chokidar-cli": "^1.2.0",
     "http-server": "^0.10.0",
     "npm-run-all": "^4.1.1",
