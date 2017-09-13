@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - node
+cache:
+  directories:
+    - "node_modules"
+deploy:
+  provider: heroku
+  api_key:
+    secure: YQYsgkuN0Cjdd5CjYdCTfmTBrKyGnjHspX7TsTb/+frb/hyLVm3lICDjNSTcCg8s7crVmo/TozlKW1LgIDFTUZijKdAVjsdkpRGrNDAVsOAYVgiODnl8vzI3FFWH0RHTCK+4qK/opOvG5M5aqSOBpp/Ri1pXj5S5nw32pu7gYnwe5LLF5WOizBPE24G8U8SWVoSV+qqv9knJWUgK3bWmEP7CmPCwsY/3sNjl09gP5GPEDPdnSbdtbm77zDBsa+VFY2QoZc67Gqy63QGjih058AODOykR+i1zSe0SunQmldTde1380aDbzg8rvm0kAaLKn4ty31hN8x9OUX0xHNhnPn2VxP3xOnQoiro4QPYvjyQZalDvqX8eoSAaRmItnOknCYWfxMVivJHgg8EovPiFxYCX/FA803fOD5Ukb45CmMgv5qK19DYzCZBByBDwHIkhDHmM2o/1kqTmGGRiWulnmxAw+k2+30nB266MW6bP8ApuRiXBEv3s0yaxy9RRnKItYvYRYZ5pMMSWDIo9rKtd2NESHzX9mhleL994z8S6MROJCtOlwNOvQCxdyoM7gBS8QQbdTJ9aMZL8CqwIxZyWFIfonIMepDaPUNk+peHbr1AcJSlXfiHg1RuEItyCb52lIBUDzTtiXhzia0+pBzk6qMHhflI2REuOIuml2sehvmE=
+  app: spygi-cv
+  on:
+    repo: spygi/cv-app
