@@ -9,7 +9,8 @@
     "sass:build": "npm-run-all -p build-task:*",
     "sass:watch": "chokidar 'scss/**/*.scss' -c 'npm run sass:build'",
     "dev": "npm-run-all -p sass:*",
-    "test": "jasmine"
+    "test": "jasmine",
+    "start": "http-server ."
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,7 @@
   "dependencies": {
     "autoprefixer": "^7.1.4",
     "chokidar-cli": "^1.2.0",
+    "http-server": "^0.10.0",
     "npm-run-all": "^4.1.1",
     "postcss-cli": "^4.1.1"
   },
