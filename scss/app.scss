@@ -1,7 +1,7 @@
-@import '../bower_components/bootstrap/scss/_functions.scss';
+@import '../node_modules/bootstrap/scss/_functions.scss';
 // required here before variables because Bootstrap 4 is still in beta
-@import '../bower_components/bootstrap/scss/_variables.scss';
-@import '../bower_components/bootstrap/scss/mixins/_border-radius.scss';
+@import '../node_modules/bootstrap/scss/_variables.scss';
+@import '../node_modules/bootstrap/scss/mixins/_border-radius.scss';
 
 @media screen and (min-width: 640px) {
   #cv-app {
