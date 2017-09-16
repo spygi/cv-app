@@ -4,14 +4,18 @@ var app = app || {};
 (function ($) {
     'use strict';
 
-    app.AppView = Backbone.View.extend({
-        el: '#cv-app',
+    app.WorkView = Backbone.View.extend({
+        el: '.work',
+
+        template: _.template($('#work-template').html()),
 
         initialize: function () {
-            app.WorkCollection.render();
+
         },
 
         render: function () {
+            debugger;
+            this.$el.html(this.template(this.model.toJSON()));
             return this;
         }
     });

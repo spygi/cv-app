@@ -12,7 +12,8 @@
 <div id="cv-app">
     <aside>
         <header>
-            <img class="rounded-circle" src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAV9AAAAJDQ0ZmNiYzk1LTJlY2EtNGEyYi1iNzk0LWE0NWVlNzE1ZjRlOA.jpg">
+            <img class="rounded-circle"
+                 src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAV9AAAAJDQ0ZmNiYzk1LTJlY2EtNGEyYi1iNzk0LWE0NWVlNzE1ZjRlOA.jpg">
             <h1>Spy Gi</h1>
         </header>
         <nav id="navigation">
@@ -20,7 +21,7 @@
             <a href=""></a>
             <a href=""></a>
 
-            <div>Work Experience</div>
+            <div class="work"></div>
             <div>Education</div>
             <div>Further education</div>
             <div>Hobbies</div>
@@ -37,24 +38,19 @@
     </footer>
 </div>
 
-<!--<script type="text/template" id="section-template">-->
-<!--<div class="view">-->
-<!--<input class="toggle" type="checkbox" <%- completed ? 'checked' : '' %>>-->
-<!--<label><%= title %></label>-->
-<!--<button class="destroy"></button>-->
-<!--</div>-->
-<!--<input class="edit" value="<%= title %>">-->
-<!--</script>-->
+<script type="text/template" id="work-template">
+    <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+    <div class="title"><%- title%></div>
+</script>
 
 
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/underscore/underscore.js"></script>
 <script src="node_modules/backbone/backbone.js"></script>
-<!--<script src="js/models/todo.js"></script>-->
-<!--<script src="js/collections/todos.js"></script>-->
-<!--<script src="js/views/todo-view.js"></script>-->
-<!--<script src="js/views/app-view.js"></script>-->
-<!--<script src="js/routers/router.js"></script>-->
-<!--<script src="js/app.js"></script>-->
+<script src="js/models/work.js"></script>
+<script src="js/collections/works.js"></script>
+<script src="js/views/work.js"></script>
+<script src="js/views/app-view.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
