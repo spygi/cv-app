@@ -14,7 +14,6 @@ var app = app || {};
         },
 
         render: function () {
-            debugger;
             this.$el.html(this.template(this.model.toJSON()));
             return this;
         }

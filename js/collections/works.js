@@ -7,8 +7,9 @@ var app = app || {};
     var breakpointSmall = 480; // taken from CSS
     var doodleCto = {
         id: "doodle-cto",
-        "title": "CTO",
-        "company": "Doodle AG, Zurich",
+        title: "CTO",
+        company: "Doodle AG",
+        location: "Zurich",
         "startDate": new Date(2016, 1, 1),
         "finishDate": new Date(2017, 8, 1),
         "description": ""
