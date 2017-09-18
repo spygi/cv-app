@@ -12,8 +12,6 @@ var app = app || {};
         shortTemplate: _.template($('#short-work-template').html()),
         longTemplate: _.template($('#long-work-template').html()),
 
-        tagName: 'a',
-
         initialize: function (options) {
             this.el.id = options.model.get("id") ? options.model.get("id") : "";
 
@@ -28,11 +26,8 @@ var app = app || {};
         render: function () {
             if (window.innerWidth > breakpointSmall) {
                 this.$el.html(this.longTemplate(this.model.toJSON()));
-
             } else {
                 this.$el.html(this.shortTemplate(this.model.toJSON()));
-                this.$el.attr("href", this.model.get("link"));
-                this.$el.attr("target", "_blank");
             }
             return this;
         }

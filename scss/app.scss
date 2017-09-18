@@ -45,7 +45,7 @@ aside {
 }
 
 .work {
-  background-color: $gray-400;
+  color: $work-color;
 
   a {
     color: $work-color;
@@ -53,15 +53,20 @@ aside {
 
   > * {
     background-color: $work-background-color;
-    color: $work-color;
     padding: 1rem;
     border-radius: 5px;
   }
 
   @media screen and (max-width: $breakpoint-small) {
+    background-color: $gray-400;
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 1rem;
+
+    > * {
+      border-radius: 5px;
+    }
 
     #doodle-cto {
       grid-area: 1 / 1 / 2 / 4;
@@ -93,7 +98,6 @@ aside {
       font-weight: bold;
       display: flex;
       align-items: baseline;
-      padding-bottom: 1rem;
 
       .company {
         padding-right: 1rem;
@@ -105,7 +109,7 @@ aside {
     }
   }
 
-  .read-more .linkedin-logo {
+  .linkedin-logo {
     vertical-align: sub;
   }
 
