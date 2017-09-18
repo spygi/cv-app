@@ -16,7 +16,7 @@ var app = app || {};
             this.el.id = options.model.get("id") ? options.model.get("id") : "";
 
             if (window.innerWidth > breakpointSmall) {
-                options.model.dates = options.model.get("startDate").format(longDatesFormat) + " - " + options.model.get("finishDate").format(longDatesFormat);
+                options.model.set("dates", options.model.get("startDate").format(longDatesFormat) + " - " + options.model.get("finishDate").format(longDatesFormat));
             } else {
                 options.model.set("shortMeta", options.model.get("title") + ", " + options.model.get("company"));
                 options.model.set("dates", options.model.get("startDate").format(shortDatesFormat) + " - " + options.model.get("finishDate").format(shortDatesFormat));
