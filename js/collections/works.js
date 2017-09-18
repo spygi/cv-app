@@ -5,20 +5,26 @@ var app = app || {};
     'use strict';
 
     var breakpointSmall = 480; // taken from CSS
+    var shortDatesFormat = "MM/YY";
+    var longDatesFormat = "MMMM YYYY";
     var doodleCto = {
         id: "doodle-cto",
         title: "CTO",
         company: "Doodle AG",
         location: "Zurich",
-        "startDate": new Date(2016, 1, 1),
-        "finishDate": new Date(2017, 8, 1),
-        "description": ""
+        startDate: moment(new Date(2016, 1, 1)),
+        finishDate: moment(new Date(2017, 7, 1))
     };
 
     var Works = Backbone.Collection.extend({
         model: app.WorkModel,
 
         initialize: function () {
+            if (window.innerWidth < breakpointSmall) {
+                doodleCto.dates = doodleCto.startDate.format(shortDatesFormat) + " - " + doodleCto.finishDate.format(shortDatesFormat);
+            } else {
+                doodleCto.dates = doodleCto.startDate.format(longDatesFormat) + " - " + doodleCto.finishDate.format(longDatesFormat);
+            }
             this.add(new app.WorkModel(doodleCto));
         },
 

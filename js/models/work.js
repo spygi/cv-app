@@ -9,8 +9,8 @@ var app = app || {};
             title: "Position",
             company: "Company name, City",
             dates: "01/16 - 01/17",
-            description: "It was cool job.",
-            link: "https://www.linkedin.com/in/spyrosgiannakakis/",
+            description: "",
+            link: "https://www.linkedin.com/in/spyrosgiannakakis/"
         }
     });
 })();
