@@ -6,7 +6,7 @@ var app = app || {};
 
     var breakpointSmall = 480; // taken from CSS
     var shortDatesFormat = "MM/YY";
-    var longDatesFormat = "MMMM YYYY";
+    var longDatesFormat = "MMM. 'YY";
 
     app.WorkView = Backbone.View.extend({
         shortTemplate: _.template($('#short-work-template').html()),

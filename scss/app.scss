@@ -12,7 +12,6 @@ $breakpoint-large: nth($breakpoints, 2);
     display: grid;
     grid-template-rows: 8fr 1fr;
     grid-template-columns: 1fr 3fr;
-    grid-gap: 1rem;
   }
 }
 
@@ -95,14 +94,18 @@ aside {
       display: flex;
       align-items: baseline;
       padding-bottom: 1rem;
+      justify-content: space-between;
 
-      .company {
-        padding-right: 1rem;
-        flex-shrink: 2;
+      .title-company {
+        flex: 0 0 auto;
+        flex: 0 0 auto;
       }
 
-      .space {
-        flex-grow: 2;
+      .dates-location {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex: 0 10 auto;
       }
     }
 
