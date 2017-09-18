@@ -4,17 +4,31 @@ var app = app || {};
 (function ($) {
     'use strict';
 
-    app.WorkView = Backbone.View.extend({
-        el: '.work',
+    var breakpointSmall = 480; // taken from CSS
+    var shortDatesFormat = "MM/YY";
+    var longDatesFormat = "MMMM YYYY";
 
-        template: _.template($('#work-template').html()),
+    app.WorkView = Backbone.View.extend({
+        shortTemplate: _.template($('#short-work-template').html()),
+        longTemplate: _.template($('#long-work-template').html()),
 
         initialize: function (options) {
-            this.$el[0].id = options.model.get("id") ? options.model.get("id") : "";
+            this.el.id = options.model.get("id") ? options.model.get("id") : "";
+
+            if (window.innerWidth > breakpointSmall) {
+                options.model.dates = options.model.get("startDate").format(longDatesFormat) + " - " + options.model.get("finishDate").format(longDatesFormat);
+            } else {
+                options.model.set("shortMeta", options.model.get("title") + ", " + options.model.get("company"));
+                options.model.set("dates", options.model.get("startDate").format(shortDatesFormat) + " - " + options.model.get("finishDate").format(shortDatesFormat));
+            }
         },
 
         render: function () {
-            this.$el.html(this.template(this.model.toJSON()));
+            if (window.innerWidth > breakpointSmall) {
+                this.$el.html(this.longTemplate(this.model.toJSON()));
+            } else {
+                this.$el.html(this.shortTemplate(this.model.toJSON()));
+            }
             return this;
         }
     });

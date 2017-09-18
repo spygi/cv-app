@@ -4,35 +4,42 @@ var app = app || {};
 (function () {
     'use strict';
 
-    var breakpointSmall = 480; // taken from CSS
-    var shortDatesFormat = "MM/YY";
-    var longDatesFormat = "MMMM YYYY";
     var doodleCto = {
         id: "doodle-cto",
         title: "CTO",
         company: "Doodle AG",
+        link: "https://www.doodle.com",
+        location: "Zurich",
+        startDate: moment(new Date(2016, 1, 1)),
+        finishDate: moment(new Date(2017, 7, 1))
+    };
+    var doodleDev = {
+        id: "doodle-dev",
+        title: "Software Engineer",
+        company: "Doodle AG",
+        link: "https://www.doodle.com",
         location: "Zurich",
         startDate: moment(new Date(2016, 1, 1)),
         finishDate: moment(new Date(2017, 7, 1))
     };
 
+    var modelJson = [doodleCto, doodleDev];
+
+
     var Works = Backbone.Collection.extend({
         model: app.WorkModel,
 
         initialize: function () {
-            if (window.innerWidth < breakpointSmall) {
-                doodleCto.dates = doodleCto.startDate.format(shortDatesFormat) + " - " + doodleCto.finishDate.format(shortDatesFormat);
-            } else {
-                doodleCto.dates = doodleCto.startDate.format(longDatesFormat) + " - " + doodleCto.finishDate.format(longDatesFormat);
-            }
-            this.add(new app.WorkModel(doodleCto));
+            _.each(modelJson, function (model) {
+                this.add(new app.WorkModel(model));
+            }, this);
         },
 
         // render the collection by calling the render() for all models it contains
         render: function () {
             _.each(this.models, function (model) {
                 var view = new app.WorkView({model: model});
-                view.render();
+                $('.work').append(view.render().el);
             });
         }
     });

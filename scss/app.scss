@@ -5,7 +5,7 @@
 @import "_variables.scss";
 
 $breakpoint-small: nth($breakpoints, 1);
-$breakpoint-medium: nth($breakpoints, 2);
+$breakpoint-large: nth($breakpoints, 2);
 
 @media screen and (min-width: $breakpoint-small) {
   #cv-app {
@@ -23,7 +23,7 @@ h1 {
 }
 
 aside {
-  border-right: 1px $yellow solid;
+  background-color: $gray-400;
 
   display: flex;
   align-items: center;
@@ -45,37 +45,80 @@ aside {
 }
 
 .work {
-  background-color: $work-background-color;
-  color: $work-color;
-  padding: 1rem;
+  background-color: $gray-400;
 
   a {
-    text-decoration: none;
     color: $work-color;
   }
 
-  .meta {
-    display: flex;
-    align-items: baseline;
-
-    .title-company {
-      padding-right: 1rem;
-    }
-
-    .space {
-      flex-grow: 2;
-    }
+  > * {
+    background-color: $work-background-color;
+    color: $work-color;
+    padding: 1rem;
+    border-radius: 5px;
   }
-}
 
-#doodle-cto .description::after {
   @media screen and (max-width: $breakpoint-small) {
-    content: 'Short desc';
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+
+    #doodle-cto {
+      grid-area: 1 / 1 / 2 / 4;
+    }
+
+    #doodle-dev {
+      grid-area: 1 / 4 / 2 / 6;
+    }
+
+    .read-more {
+      grid-area: 2 / 1 / 3 / 6;
+    }
+
+    .long-meta {
+      display: none;
+    }
+
   }
+
   @media screen and (min-width: $breakpoint-small) {
-    content: "Key responsibilities: people management of 11 app and web developers, recruiting and team building, platform roadmap, service availability and architecture, technological strategy and vision, representation of engineering in Doodle’s upper management and board.
+    > * {
+      border-bottom: 1px solid $gray-300;
+    }
+
+    :last-child {
+      border-bottom: none;
+    }
+
+    .meta {
+      font-weight: bold;
+      display: flex;
+      align-items: baseline;
+      padding-bottom: 1rem;
+
+      .company {
+        padding-right: 1rem;
+      }
+
+      .space {
+        flex-grow: 2;
+      }
+    }
+  }
+
+  .read-more linkedin-logo {
+    vertical-align: sub;
+  }
+
+  #doodle-cto .description::after {
+    @media screen and (min-width: $breakpoint-small) {
+      content: 'Key responsibilities: team lead and recruiting, platform roadmap, service availability and architecture, technological strategy and vision, representation of engineering in Doodle’s upper management and board.';
+    }
+    @media screen and (min-width: $breakpoint-large) {
+      content: "Key responsibilities: people management of 11 app and web developers, recruiting and team building, platform roadmap, service availability and architecture, technological strategy and vision, representation of engineering in Doodle’s upper management and board.
  About engineering culture: I introduced regular 1-1s with all devs, sponsored education and workshop requests for developers, introduced a 360 review process (inspired by Google) which was eventually adopted by the rest of the company, advocated opening up Doodle’s API to external developers. Highlights on scaling the team: I proposed a new company structure (based on Spotify) which was accepted by the rest of management team, introduced a new hiring process, mentored team leads and proposed Doodle’s first career path for engineers. These enabled Doodle to double its web developers in a year while also integrating and instilling a healthy engineering culture across all remote offices (Zürich, Berlin, Tel Aviv).
  Highlights on technical work: introduced Scrum in the platform team, pushed further Doodle's move to the cloud, active monitoring of servers and better testing environments. These allowed Doodle to redesign its whole service and also experiment with new micro services and technologies, while maintaining a 99.999% availability level.";
+    }
   }
 }
 

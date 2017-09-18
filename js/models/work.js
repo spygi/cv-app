@@ -10,7 +10,7 @@ var app = app || {};
             company: "Company name, City",
             dates: "01/16 - 01/17",
             description: "",
-            link: "https://www.linkedin.com/in/spyrosgiannakakis/"
+            shortMeta: ""
         }
     });
 })();
