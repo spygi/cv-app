@@ -4,16 +4,25 @@ var app = app || {};
 (function () {
     'use strict';
 
-    var Works= Backbone.Collection.extend({
+    var breakpointSmall = 480; // taken from CSS
+    var doodleCto = {
+        id: "doodle-cto",
+        "title": "CTO",
+        "company": "Doodle AG, Zurich",
+        "startDate": new Date(2016, 1, 1),
+        "finishDate": new Date(2017, 8, 1),
+        "description": ""
+    };
+
+    var Works = Backbone.Collection.extend({
         model: app.WorkModel,
-        initialize: function(){
-            this.add(new app.WorkModel());
+
+        initialize: function () {
+            this.add(new app.WorkModel(doodleCto));
         },
 
-        // render a collection by calling the render() for all models it containts
-        render: function() {
-            debugger;
-
+        // render the collection by calling the render() for all models it contains
+        render: function () {
             _.each(this.models, function (model) {
                 var view = new app.WorkView({model: model});
                 view.render();
@@ -21,5 +30,5 @@ var app = app || {};
         }
     });
 
-    app.WorkCollection = new Works();
+    app.WorkCollection = new Works(); // global collection of "works"
 })();

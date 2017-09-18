@@ -9,8 +9,8 @@ var app = app || {};
 
         template: _.template($('#work-template').html()),
 
-        initialize: function () {
-
+        initialize: function (options) {
+            this.$el[0].id = options.model.get("id") ? options.model.get("id") : "";
         },
 
         render: function () {
