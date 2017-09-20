@@ -23,7 +23,8 @@ var app = app || {};
         location: "Zurich",
         startDate: moment(new Date(2013, 8, 1)),
         finishDate: moment(new Date(2016, 0, 1)),
-        description: "Full stack engineer with focus on the back-end. Additional responsibilities: scrum-master, recruiting/onboarding of new engineers, setting up and maintaining Doodle’s documentation."
+        description: "Full stack engineer with focus on the back-end. Additional responsibilities: scrum-master, recruiting/onboarding of new engineers, setting up and maintaining Doodle’s documentation.",
+        backDescription: "Java, JS/Backbone, SCSS, HTML"
     };
     var dacuda = {
         id: "dacuda",
@@ -33,7 +34,8 @@ var app = app || {};
         location: "Zurich",
         startDate: moment(new Date(2012, 11, 1)),
         finishDate: moment(new Date(2013, 6, 1)),
-        description: "Dacuda develops smart scanning technologies for consumer electronics. I worked on a dashboard for critical business metrics and a demo proposal for the European Internet of Things project."
+        description: "Dacuda develops smart scanning technologies for consumer electronics. I worked on a dashboard for critical business metrics and a demo proposal for the European Internet of Things project.",
+        backDescription: "Python, C++"
     };
 
     var modelJson = [doodleCto, doodleDev, dacuda];
