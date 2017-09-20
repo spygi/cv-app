@@ -24,20 +24,19 @@
     </aside>
 
     <section class="work">
-        <a href="https://www.linkedin.com/in/spyrosgiannakakis/" target="_blank" class="read-more">
+        <a href="https://www.linkedin.com/in/spyrosgiannakakis/" target="_blank" class="custom-card read-more">
             Read more <img src="assets/linkedin.png" class="linkedin-logo" height="20px" alt="Linkedin">
         </a>
     </section>
-
     <footer>
         <p>2017</p>
     </footer>
 </div>
 
 <script type="text/template" id="short-work-template">
-    <a href="<%- link %>" target="_blank">
-        <div class="meta"><%- title%>, <%- company%></div>
-    </a>
+    <span class="front"><%- title%>, <a href="<%- link %>" target="_blank"><%- company%></a></span>
+    <span class="back"><%- backDescription %></span>
+    <!-- Using spans here in order to have them in the same line -->
 </script>
 
 <script type="text/template" id="long-work-template">

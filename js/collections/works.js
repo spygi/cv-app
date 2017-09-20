@@ -12,7 +12,8 @@ var app = app || {};
         location: "Zurich",
         startDate: moment(new Date(2016, 1, 1)),
         finishDate: moment(new Date(2017, 7, 1)),
-        description: "Key responsibilities: team lead and recruiting, platform roadmap, service availability and architecture, technological strategy and vision, representation of engineering in Doodle’s upper management and board."
+        description: "Key responsibilities: team lead and recruiting, platform roadmap, service availability and architecture, technological strategy and vision, representation of engineering in Doodle’s upper management and board.",
+        backDescription: "Team lead, recruiting, roadmaps, strategy & vision"
     };
     var doodleDev = {
         id: "doodle-dev",

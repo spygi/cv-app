@@ -57,14 +57,35 @@ aside {
   }
 
   @media screen and (max-width: $breakpoint-small) {
-    background-color: $gray-400;
-
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 1rem;
 
-    > * {
+    .custom-card {
+      // Note: can't use the class "card" because of a collision with Bootstrap
       border-radius: 5px;
+      transform-style: preserve-3d;
+      transition: 0.5s;
+      cursor: pointer;
+      position: relative; // required to position 'absolutely' the .front and .back
+
+      .front, .back {
+        backface-visibility: hidden; // experimental property: Mozilla doesn't respect this when .clicked is applied, even with a -moz prefix
+
+        // CSS transformations are applied on 'transformable' elements which are block and inline-block elements: https://stackoverflow.com/a/14883287/2259743
+        // For some reason, using span + inline-block worked better than simply using divs
+        display: inline-block;
+      }
+
+      .back {
+        transform: rotateY(-180deg); // This should work with +180deg as well but Chrome made the text disappear after the tranformation
+        position: absolute;
+        right: 1rem; // same as the padding applied on the parent
+      }
+
+      &.clicked {
+        transform: rotateY(180deg);
+      }
     }
 
     #doodle-cto {
@@ -99,7 +120,6 @@ aside {
       justify-content: space-between;
 
       .title-company {
-        flex: 0 0 auto;
         flex: 0 0 auto;
       }
 

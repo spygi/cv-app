@@ -12,13 +12,25 @@ var app = app || {};
         shortTemplate: _.template($('#short-work-template').html()),
         longTemplate: _.template($('#long-work-template').html()),
 
+        // From Backbone comments:
+        // If `this.el` is a string, pass it through `$()`, take the first
+        // matching element, and re-assign it to `el`. Otherwise, create
+        // an element from the `id`, `className` and `tagName` properties.
+        className: 'custom-card',
+
+        events: {
+            "click": function () {
+                // From Backbone docs: Omitting the selector binds the event to `this.el`.
+                this.el.classList.toggle("clicked");
+            }
+        },
+
         initialize: function (options) {
             this.el.id = options.model.get("id") ? options.model.get("id") : "";
 
             if (window.innerWidth > breakpointSmall) {
                 options.model.set("dates", options.model.get("startDate").format(longDatesFormat) + " - " + options.model.get("finishDate").format(longDatesFormat));
             } else {
-                options.model.set("shortMeta", options.model.get("title") + ", " + options.model.get("company"));
                 options.model.set("dates", options.model.get("startDate").format(shortDatesFormat) + " - " + options.model.get("finishDate").format(shortDatesFormat));
             }
         },
