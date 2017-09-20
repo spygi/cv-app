@@ -1,5 +1,8 @@
 @import "_variables.scss";
 
+$work-background-color: $gray-900;
+$work-color: antiquewhite;
+
 .work {
   color: $work-color;
 
@@ -12,6 +15,7 @@
     padding: 1rem;
   }
 
+  // small devices
   @media screen and (max-width: $breakpoint-small) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -63,12 +67,18 @@
     }
   }
 
+  // medium devices
   @media screen and (min-width: $breakpoint-small) {
     display: flex;
     flex-direction: column;
 
     > * {
       border-bottom: 1px solid $gray-300;
+    }
+
+    .back {
+      // this rule is here only if a user resizes from small to medium, normally should happen when switching to landscape from portrait mode
+      display: none;
     }
 
     .meta {
