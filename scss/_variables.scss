@@ -1,4 +1,10 @@
+@import "../node_modules/bootstrap/scss/_functions.scss";
+// required here before variables because Bootstrap 4 is still in beta
+@import "../node_modules/bootstrap/scss/_variables.scss";
+
 $breakpoints: "480px", "1047px";
+$breakpoint-small: nth($breakpoints, 1);
+$breakpoint-large: nth($breakpoints, 2);
 
 $work-background-color: $gray-900;
 $work-color: antiquewhite;
