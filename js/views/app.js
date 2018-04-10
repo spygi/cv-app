@@ -7,8 +7,10 @@ var app = app || {};
     app.AppView = Backbone.View.extend({
         el: '#cv-app',
 
-        initialize: function () {
+        initialize: function (properties) {
             app.WorkCollection.render();
+            var techView = new app.TechView(properties);
+            techView.render();
         },
 
         render: function () {

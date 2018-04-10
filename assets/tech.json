@@ -1,0 +1,177 @@
+{
+  "name": "technologies",
+  "children": [
+    {
+      "name": "Backend & DBs",
+      "children": [
+        {
+          "name": "Java",
+          "size": 200
+        },
+        {
+          "name": "NodeJS",
+          "size": 20
+        },
+        {
+          "name": "Python",
+          "size": 100
+        },
+        {
+          "name": "MongoDb",
+          "size": 200
+        }
+      ]
+    },
+    {
+      "name": "Frontend & UX",
+      "children": [
+        {
+          "name": "HTML (5)",
+          "size": 100
+        },
+        {
+          "name": "(S)CSS (3)",
+          "size": 100
+        },
+        {
+          "name": "Javascript",
+          "children": [
+            {
+              "name": "Backbone JS",
+              "size": 50
+            },
+            {
+              "name": "React JS - WIP",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "name": "Prototyping tools",
+          "children": [
+            {
+              "name": "Figma",
+              "size": 10
+            },
+            {
+              "name": "Invision",
+              "size": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DevOps",
+      "children": [
+        {
+          "name": "Bash",
+          "size": 50
+        },
+        {
+          "name": "Configuration mgmt - Puppet",
+          "size": 10
+        },
+        {
+          "name": "Containerization - WIP",
+          "children": [
+            {
+              "name": "Docker",
+              "size": 10
+            },
+            {
+              "name": "Kubernetes",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "name": "Build tools",
+          "children": [
+            {
+              "name": "npm",
+              "size": 10
+            },
+            {
+              "name": "Gradle",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "name": "CI/CD tools",
+          "children": [
+            {
+              "name": "Jenkins",
+              "size": 50
+            },
+            {
+              "name": "Travis",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "name": "Monitoring tools",
+          "children": [
+            {
+              "name": "New Relic",
+              "size": 50
+            },
+            {
+              "name": "jstack/jmap",
+              "size": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Misc tools",
+      "children": [
+        {
+          "name": "Git",
+          "size": 50
+        },
+        {
+          "name": "Cloud IaaS/Paas (Google/AWS/Heroku)",
+          "size": 50
+        },
+        {
+          "name": "Testing",
+          "children": [
+            {
+              "name": "JUnit",
+              "size": 50
+            },
+            {
+              "name": "Jasmine",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "name": "ELK stack",
+          "size": 10
+        },
+        {
+          "name": "Google Analytics",
+          "size": 10
+        },
+        {
+          "name": "Product mangement",
+          "children": [
+            {
+              "name": "Jira",
+              "size": 10
+            },
+            {
+              "name": "Trello",
+              "size": 10
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

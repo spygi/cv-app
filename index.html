@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="dist/css/app.css">
     <link rel="shortcut icon" type="image/png" href="assets/vanity.png"/>
 </head>
+
 <body>
 <div id="cv-app">
     <aside>
@@ -17,17 +18,31 @@
             <h1>Spyros Giannakakis</h1>
         </header>
         <nav id="navigation">
-            <a href="#work"><span class="fa fa-briefcase icon" aria-hidden="true"></span>Work</a>
+            <div>
+                <a href="#work">
+                    <span class="fa fa-briefcase icon" aria-hidden="true"></span>Work
+                </a>
+            </div>
+            <div>
+                <a href="#tech"><span class="fa fa-laptop icon" aria-hidden="true"></span>Tech</a>
+            </div>
         </nav>
     </aside>
 
-    <section class="work">
-        <a href="https://www.linkedin.com/in/spyrosgiannakakis/" target="_blank" class="custom-card read-more">
-            Read more <img src="assets/linkedin.png" class="linkedin-logo" height="20px" alt="Linkedin">
-        </a>
-    </section>
+    <div id="details">
+        <section class="work">
+            <a href="https://www.linkedin.com/in/spyrosgiannakakis/" target="_blank" class="custom-card read-more">
+                Read more <img src="assets/linkedin.png" class="linkedin-logo" height="20px" alt="Linkedin">
+            </a>
+        </section>
+
+        <section class="tech">
+            <svg></svg>
+        </section>
+    </div>
+
     <footer>
-        <p>2017</p>
+        <p>2018</p>
     </footer>
 </div>
 
@@ -45,15 +60,17 @@
     <span class="description"><%- description%></span>
 </script>
 
-
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/underscore/underscore.js"></script>
 <script src="node_modules/backbone/backbone.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script> <!-- exposes a d3 global -->
 
 <script src="js/models/work.js"></script>
 <script src="js/collections/works.js"></script>
 <script src="js/views/work.js"></script>
+<script src="js/views/tech.js"></script>
+
 <script src="js/views/app.js"></script>
 <script src="js/app.js"></script>
 

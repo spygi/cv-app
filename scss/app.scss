@@ -1,14 +1,19 @@
 @import "../node_modules/bootstrap/scss/mixins/_border-radius.scss";
-
 // my stuff
 @import "_variables.scss";
 @import "work.scss";
+@import "tech.scss";
 
+// medium and large screens
 @media screen and (min-width: $breakpoint-small) {
   #cv-app {
     display: grid;
     grid-template-rows: 8fr 1fr;
     grid-template-columns: 1fr 3fr;
+  }
+
+  aside {
+    grid-area: 1 / 1 / 3 / 2;
   }
 }
 
@@ -16,18 +21,16 @@
   background: linear-gradient(to bottom right, $gray-400, transparent);
 }
 
-h1 {
-  font-family: 'Amatic SC', sans-serif; // overriding Bootstrap with a downloaded font and a fallback
-  color: $indigo;
-  text-align: center;
-}
-
 aside {
   display: flex;
   align-items: center;
   flex-flow: column nowrap;
+}
 
-  grid-area: 1 / 1 / 3 / 2;
+h1 {
+  font-family: 'Amatic SC', sans-serif; // overriding Bootstrap with a downloaded font and a fallback
+  color: $indigo;
+  text-align: center;
 }
 
 #navigation {
