@@ -6,8 +6,7 @@ Built with:
 + SCSS
   + Compiled with npm scripts
   + Bootstrap
-  + CSS grid
-  + Flexbox
+  + CSS3: grid, flexbox
 + JS
   + Backbone
 
