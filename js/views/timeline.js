@@ -13,19 +13,19 @@ var app = app || {};
 
             window.setTimeout(function () {
                 $('.first').toggleClass('visible');
-            }, 1000);
+            }, 500);
             window.setTimeout(function () {
                 $('.second').toggleClass('visible');
-            }, 2000);
+            }, 1500);
             window.setTimeout(function () {
                 $('.third').toggleClass('visible');
-            }, 3000);
+            }, 2500);
             window.setTimeout(function () {
                 $('.fourth').toggleClass('visible');
-            }, 3500);
+            }, 3000);
             window.setTimeout(function () {
                 $('.fifth').toggleClass('visible');
-            }, 4500);
+            }, 4000);
 
             return this;
         }

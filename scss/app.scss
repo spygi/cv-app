@@ -19,21 +19,20 @@
   }
 }
 
-#cv-app {
-  background: linear-gradient(to bottom right, $gray-400, transparent);
-  text {
-    @include general-font;
-  }
-}
-
 aside {
   display: flex;
   align-items: center;
   flex-flow: column nowrap;
 }
 
+aside, .timeline {
+  // sharing a linear gradient across elements
+  background-image: linear-gradient(to bottom right, #adb5bd 15%, transparent 80%);
+  background-attachment: fixed;
+}
+
 h1 {
-  font-family: 'Nunito Sans', sans-serif; // overriding Bootstrap with a downloaded font and a fallback
+  font-family: 'Nunito Sans', sans-serif;
   color: hsla(19, 88.5%, 65.3%, 1);
   text-align: center;
   font-size: 23px;
@@ -47,6 +46,12 @@ h2 {
   line-height: 1;
   margin-bottom: 0;
   text-align: center;
+
+  .fa-asterisk {
+    width: 5px !important; // not proud of this
+    color: hsla(19, 88.5%, 65.3%, 1);
+    vertical-align: -6px;
+  }
 }
 
 #navigation {
