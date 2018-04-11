@@ -11,6 +11,7 @@ var app = app || {};
             app.WorkCollection.render();
             var techView = new app.TechView(properties);
             techView.render();
+            app.TimelineView.render();
         },
 
         render: function () {

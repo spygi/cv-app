@@ -1,0 +1,16 @@
+.timeline {
+  .stop {
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+  }
+  .visible {
+    opacity: 1;
+  }
+
+  .work {
+    fill: hsl(255, 77%, 38%);
+  }
+  .study {
+    fill: hsl(324, 62%, 54%);
+  }
+}

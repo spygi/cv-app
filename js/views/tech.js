@@ -14,7 +14,7 @@ var app = app || {};
         render: function () {
             var width = window.innerWidth > this.properties.breakpointSmall ? $('#details').width() : window.innerWidth;
 
-            // mostly coppied over https://bl.ocks.org/mbostock/7607535
+            // mostly copied over https://bl.ocks.org/mbostock/7607535
             var svg = d3.select("svg"), margin = 20, diameter = +width, g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
             svg.attr("width", width); // set width
             svg.attr("height", width);
