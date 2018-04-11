@@ -1,5 +1,6 @@
 @import "../node_modules/bootstrap/scss/mixins/_border-radius.scss";
 // my stuff
+@import "mixins/fonts";
 @import "_variables.scss";
 @import "work.scss";
 @import "tech.scss";
@@ -20,6 +21,9 @@
 
 #cv-app {
   background: linear-gradient(to bottom right, $gray-400, transparent);
+  text {
+    @include general-font;
+  }
 }
 
 aside {
@@ -29,8 +33,19 @@ aside {
 }
 
 h1 {
-  font-family: 'Amatic SC', sans-serif; // overriding Bootstrap with a downloaded font and a fallback
-  color: $indigo;
+  font-family: 'Nunito Sans', sans-serif; // overriding Bootstrap with a downloaded font and a fallback
+  color: hsla(19, 88.5%, 65.3%, 1);
+  text-align: center;
+  font-size: 23px;
+  margin: 20px 0 20px 0;
+  letter-spacing: 2px;
+}
+
+h2 {
+  @include general-font;
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 0;
   text-align: center;
 }
 
@@ -54,5 +69,20 @@ footer {
 
   @media screen and (max-width: 640px) {
     text-align: center;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.8);
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
