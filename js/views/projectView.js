@@ -5,13 +5,8 @@ var app = app || {};
     'use strict';
 
     var breakpointSmall = 480; // taken from CSS
-    var shortDatesFormat = "MM/YY";
-    var longDatesFormat = "MMM. 'YY";
 
-    app.WorkView = Backbone.View.extend({
-        shortTemplate: _.template($('#short-work-template').html()),
-        longTemplate: _.template($('#long-work-template').html()),
-
+    app.ProjectView = Backbone.View.extend({
         // From Backbone comments:
         // If `this.el` is a string, pass it through `$()`, take the first
         // matching element, and re-assign it to `el`. Otherwise, create
@@ -25,21 +20,29 @@ var app = app || {};
             }
         },
 
-        initialize: function (options) {
-            this.el.id = options.model.get("id") ? options.model.get("id") : "";
+        mapIcons: {
+            "github": '<i class="fab fa-github"></i>'
+        },
 
-            if (window.innerWidth > breakpointSmall) {
-                options.model.set("dates", options.model.get("startDate").format(longDatesFormat) + " - " + options.model.get("finishDate").format(longDatesFormat));
-            } else {
-                options.model.set("dates", options.model.get("startDate").format(shortDatesFormat) + " - " + options.model.get("finishDate").format(shortDatesFormat));
-            }
+        initialize: function (options) {
+            this.shortTemplate = $.Deferred();
+            var _this = this;
+            $.get("../../templates/projects.html", function (data) {
+                _this.shortTemplate.resolve(_.template($(data).html()));
+            });
+
+            this.el.id = options.model.get("id") ? options.model.get("id") : "";
         },
 
         render: function () {
+            var _this = this;
             if (window.innerWidth > breakpointSmall) {
                 this.$el.html(this.longTemplate(this.model.toJSON()));
             } else {
-                this.$el.html(this.shortTemplate(this.model.toJSON()));
+                this.shortTemplate.done(function (template) {
+                    _this.model.set("icon", _this.mapIcons[_this.model.get("platform")]);
+                    _this.$el.html(template(_this.model.toJSON()));
+                });
             }
             return this;
         }

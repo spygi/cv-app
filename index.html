@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="dist/css/app.css">
     <link rel="shortcut icon" type="image/png" href="assets/vanity.png"/>
     <link rel="import" href="./templates/timeline.html">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+          integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 </head>
 
 <body>
@@ -24,8 +26,6 @@
                         class="fab fa-linkedin-in"></i>
                 </a>
                 <a href="https://www.github.com/spygi" target="_blank"><i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.stackoverflow.com/spygi"><i class="fab fa-stack-overflow"></i>
                 </a>
                 <a href="https://www.medium.com/@spygi" target="_blank"><i class="fab fa-medium-m"></i>
                 </a>
@@ -49,16 +49,29 @@
 
     <div id="details">
         <section class="timeline">
+            <div class="timeline-more">
+                <a href="https://www.linkedin.com/in/spyrosgiannakakis" target="_blank">Read more
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
         </section>
 
         <section class="tech">
             <svg></svg>
         </section>
 
-        <section class="work">
-            <a href="https://www.linkedin.com/in/spyrosgiannakakis/" target="_blank" class="custom-card read-more">
-                Read more <img src="assets/linkedin.png" class="linkedin-logo" height="20px" alt="Linkedin">
-            </a>
+        <section class="projects">
+            <div class="title">Some side-projects</div>
+            <div class="examples"></div>
+            <section class="more-links">
+                See also:
+                <a href="https://www.stackoverflow.com/spygi" target="_blank"><i class="fab fa-stack-overflow"></i>
+                </a>
+                <a href="https://www.codepen.io/spygi" target="_blank"><i class="fab fa-codepen"></i>
+                </a>
+                <a href="https://tech.spygi.me" target="_blank"><i class="fas fa-pencil-alt"></i>
+                </a>
+            </section>
         </section>
     </div>
 
@@ -66,12 +79,6 @@
         <p>2018</p>
     </footer>
 </div>
-
-<script type="text/template" id="short-work-template">
-    <span class="front"><%- title%>, <a href="<%- link %>" target="_blank"><%- company%></a></span>
-    <span class="back"><%- backDescription %></span>
-    <!-- Using spans here in order to have them in the same line -->
-</script>
 
 <script type="text/template" id="long-work-template">
     <div class="meta">
@@ -84,17 +91,13 @@
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/underscore/underscore.js"></script>
 <script src="node_modules/backbone/backbone.js"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
-        integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
-        crossorigin="anonymous"></script>
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script> <!-- exposes a d3 global -->
 
-<script src="js/models/work.js"></script>
-<script src="js/collections/works.js"></script>
-<script src="js/views/work.js"></script>
+<script src="js/models/projectModel.js"></script>
+<script src="js/collections/projectCollection.js"></script>
+<script src="js/views/projectView.js"></script>
 <script src="js/views/tech.js"></script>
 <script src="js/views/timeline.js"></script>
 

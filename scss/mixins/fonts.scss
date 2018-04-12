@@ -1,5 +1,13 @@
+@import "variables";
+
 @mixin general-font() {
   font-family: 'Helvetica Neue';
   font-weight: 300;
-  color: rgba(0, 0, 0, 0.8);
+  color: $dark-grey;
+}
+
+@mixin title-font() {
+  font-family: 'Nunito Sans', sans-serif;
+  color: $orange;
+  letter-spacing: 2px;
 }

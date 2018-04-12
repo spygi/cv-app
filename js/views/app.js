@@ -8,10 +8,10 @@ var app = app || {};
         el: '#cv-app',
 
         initialize: function (properties) {
-            app.WorkCollection.render();
+            app.TimelineView.render();
             var techView = new app.TechView(properties);
             techView.render();
-            app.TimelineView.render();
+            app.ProjectCollection.render();
         },
 
         render: function () {

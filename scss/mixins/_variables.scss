@@ -1,0 +1,15 @@
+@import "../../node_modules/bootstrap/scss/functions";
+// required here before variables because Bootstrap 4 is still in beta
+@import "../../node_modules/bootstrap/scss/variables";
+
+// breakpoints
+$breakpoints: "480px", "1047px";
+$breakpoint-small: nth($breakpoints, 1);
+$breakpoint-large: nth($breakpoints, 2);
+
+// colors
+$orange: hsla(19, 88.5%, 65.3%, 1);
+$dark-grey: rgba(0, 0, 0, 0.8);
+$mid-grey: lighten($dark-grey, 70%);
+$light-grey: lighten($dark-grey, 90%);
+

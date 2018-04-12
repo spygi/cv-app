@@ -1,10 +1,10 @@
 @import "../node_modules/bootstrap/scss/mixins/_border-radius.scss";
 // my stuff
 @import "mixins/fonts";
-@import "_variables.scss";
-@import "work.scss";
-@import "tech.scss";
-@import "timeline.scss";
+@import "mixins/variables";
+@import "projects";
+@import "tech";
+@import "timeline";
 
 // medium and large screens
 @media screen and (min-width: $breakpoint-small) {
@@ -27,17 +27,15 @@ aside {
 
 aside, .timeline {
   // sharing a linear gradient across elements
-  background-image: linear-gradient(to bottom right, #adb5bd 15%, transparent 80%);
+  background-image: linear-gradient(to bottom right, $mid-grey 10%, transparent 60%);
   background-attachment: fixed;
 }
 
 h1 {
-  font-family: 'Nunito Sans', sans-serif;
-  color: hsla(19, 88.5%, 65.3%, 1);
+  @include title-font;
   text-align: center;
   font-size: 23px;
   margin: 20px 0 20px 0;
-  letter-spacing: 2px;
 }
 
 h2 {
