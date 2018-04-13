@@ -1,0 +1,26 @@
+@import "fonts";
+
+section {
+  @include general-font;
+
+  h1 {
+    margin: 0px;
+    padding: 10px;
+
+    @include title-font;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline dashed $orange;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

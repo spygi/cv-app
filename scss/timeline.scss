@@ -1,5 +1,5 @@
-@import "mixins/fonts";
-@import "mixins/variables";
+@import "common/fonts";
+@import "common/variables";
 
 .timeline {
   text {
@@ -10,23 +10,26 @@
     transition: opacity 1s ease-in-out;
     opacity: 0;
   }
+
   .visible {
-    opacity: 1;
+    opacity: 1 !important;
   }
 
   .work {
-    fill: hsl(255, 77%, 38%);
+    fill: $dark-violet;
   }
   .study {
-    fill: hsl(324, 62%, 54%);
+    fill: $pink;
+  }
+
+  .social {
+    text-align: right;
+    opacity: 0;
+    margin-right: 10px;
+
+    a:visited {
+      color: $dark-grey;
+    }
   }
 }
 
-.timeline-more {
-  text-align: right;
-  opacity: 0;
-
-  a {
-    @include general-font;
-  }
-}

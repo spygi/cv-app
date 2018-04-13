@@ -1,0 +1,41 @@
+// my stuff
+@import "common/fonts";
+@import "common/variables";
+
+header {
+  h1 {
+    @include title-font;
+    text-align: center;
+    font-size: 23px;
+    margin: 20px 0 20px 0;
+  }
+
+  h2 {
+    @include general-font;
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 0;
+    text-align: center;
+
+    .fa-asterisk {
+      width: 5px !important; // not proud of this
+      color: hsla(19, 88.5%, 65.3%, 1);
+      vertical-align: -6px;
+    }
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      font-size: 20px;
+      color: rgba(0, 0, 0, 0.8);
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -27,7 +27,7 @@ var app = app || {};
                 $('.fifth').toggleClass('visible');
             }, 4000);
             window.setTimeout(function () {
-                $('.timeline-more').toggleClass('visible');
+                $('.social').toggleClass('visible');
             }, 4000);
 
             return this;

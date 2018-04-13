@@ -1,19 +1,13 @@
-@import "mixins/variables";
-@import "mixins/custom-card.scss";
-@import "mixins/fonts";
+@import "common/variables";
+@import "common/custom-card.scss";
+@import "common/fonts";
 
 .projects {
   @include general-font;
   color: antiquewhite;
+
   a, a:visited {
     color: antiquewhite;
-  }
-
-  .title {
-    @include title-font;
-    font-size: 20px;
-    margin-top: 10px;
-    text-align: center;
   }
 
   // small devices
@@ -51,13 +45,12 @@
       color: $orange;
 
       a {
-        color: $orange;
+        color: inherit;
         font-size: 25px;
-        margin-right: 10px;
-        text-decoration: none;
 
-        &:last-child {
-          margin-right: 0;
+        &:hover {
+          text-decoration: none;
+          border: 1px dashed $orange;
         }
       }
     }
