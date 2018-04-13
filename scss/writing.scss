@@ -1,0 +1,11 @@
+@import "common/variables";
+
+.writing {
+  color: $dark-violet;
+
+  i {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

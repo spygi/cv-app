@@ -1,0 +1,11 @@
+@import "common/variables";
+
+.others {
+  color: $pink;
+
+  i {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
