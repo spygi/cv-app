@@ -68,7 +68,7 @@ var app = app || {};
                         };
                     });
 
-                    transition.selectAll("text").filter(function (d) {
+                    transition.selectAll(".label").filter(function (d) {
                         return d.parent === focus || this.style.display === "inline";
                     }).style("fill-opacity", function (d) {
                         return d.parent === focus ? 1 : 0;
