@@ -36,8 +36,8 @@ var app = app || {};
 
         render: function () {
             var _this = this;
-            if (window.innerWidth > breakpointSmall) {
-                this.$el.html(this.longTemplate(this.model.toJSON()));
+            if (window.outerWidth > breakpointSmall) {
+                //this.$el.html(this.longTemplate(this.model.toJSON()));
             } else {
                 this.shortTemplate.done(function (template) {
                     _this.model.set("icon", _this.mapIcons[_this.model.get("platform")]);
