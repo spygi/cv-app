@@ -18,20 +18,23 @@
 <div id="cv-app">
     <aside>
         <header>
-            <h1>Spyros Giannakakis</h1>
-            <h2>a software engineer &#8212 with a twist?<i class="fas fa-asterisk"></i>
+            <h1>Hoi, I'm <a href="https://en.wikipedia.org/wiki/Spiro_(name)" target="_blank">Spyros</a> <i
+                    class="fas fa-volume-up pronunciation">
+            </i>
+            </h1>
+            <h2>
+                <a href="https://www.github.com/spygi" target="_blank">I code <i class="fab fa-github"></i>
+                </a>
+                <div><span class="other-stuff"></span>
+                    <div class="typed-strings">
+                        <span>I also ^300 build stuff</span>
+                        <span>I also write about code etc</span>
+                        <span>I also play music</span>
+                        <span>I also snowboard</span>
+                        <span>Well, ^400 I do other stuff too</span>
+                    </div>
+                </div>
             </h2>
-            <section class="social">
-                <a href="https://www.linkedin.com/in/spyrosgiannakakis" target="_blank"><i
-                        class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://www.github.com/spygi" target="_blank"><i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.medium.com/@spygi" target="_blank"><i class="fab fa-medium-m"></i>
-                </a>
-                <a href="https://www.twitter.com/spy_gi"><i class="fab fa-twitter"></i>
-                </a>
-            </section>
         </header>
         <nav id="navigation">
             <div>
@@ -55,7 +58,7 @@
         </section>
 
         <section class="tech">
-            <h1>Tech graph</h1>
+            <h1>a fancy tech graph</h1>
             <svg></svg>
         </section>
 
@@ -83,14 +86,24 @@
         </section>
         <section class="Misc">
             <h1>Misc</h1>
-            <div>I like sports especially the ones with a board. I also play music, check out some videos <a
-                    href="https://www.youtube.com/user/sPydru" target="_blank"><i class="fab fa-youtube"></i></a>.
+            <div>I like sports especially the ones involving a board. I also play music, check out some <a
+                    href="https://www.youtube.com/user/sPydru" target="_blank">videos of me <i
+                    class="fab fa-youtube"></i></a>.
             </div>
         </section>
     </div>
 
     <footer>
         <p>2018</p>
+        <section class="social">
+            <a href="https://www.linkedin.com/in/spyrosgiannakakis" target="_blank"><i
+                    class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.medium.com/@spygi" target="_blank"><i class="fab fa-medium-m"></i>
+            </a>
+            <a href="https://www.twitter.com/spy_gi"><i class="fab fa-twitter"></i>
+            </a>
+        </section>
     </footer>
 </div>
 
@@ -105,6 +118,7 @@
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/underscore/underscore.js"></script>
 <script src="node_modules/backbone/backbone.js"></script>
+<script src="node_modules/typed.js/lib/typed.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script> <!-- exposes a d3 global -->
@@ -114,6 +128,7 @@
 <script src="js/views/projectView.js"></script>
 <script src="js/views/tech.js"></script>
 <script src="js/views/timeline.js"></script>
+<script src="js/views/header.js"></script>
 
 <script src="js/views/app.js"></script>
 <script src="js/app.js"></script>

@@ -1,6 +1,6 @@
 @import "fonts";
 
-section {
+section, header {
   @include general-font;
 
   h1 {
@@ -13,15 +13,12 @@ section {
   }
 
   a {
-    text-decoration: none;
+    text-decoration: underline solid $orange;
+    text-decoration-skip-ink: none;
     color: inherit;
 
     &:visited {
       color: inherit;
-    }
-
-    &:hover {
-      text-decoration: underline dashed $orange;
     }
 
     &:last-child {

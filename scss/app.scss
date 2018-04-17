@@ -7,6 +7,7 @@
 @import "tech";
 @import "timeline";
 @import "header";
+@import "footer";
 @import "writing";
 @import "others";
 
@@ -27,6 +28,7 @@ aside {
   display: flex;
   align-items: center;
   flex-flow: column nowrap;
+  background-color: whitesmoke;
 }
 
 #navigation {

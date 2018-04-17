@@ -28,6 +28,7 @@
     "npm-run-all": "^4.1.2",
     "postcss-cli": "^4.1.1",
     "swipejs": "^2.2.11",
+    "typed.js": "^2.0.6",
     "underscore": "^1.8.3"
   },
   "devDependencies": {

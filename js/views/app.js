@@ -8,6 +8,7 @@ var app = app || {};
         el: '#cv-app',
 
         initialize: function (properties) {
+            app.HeaderView.render();
             app.TimelineView.render();
             var techView = new app.TechView(properties);
             techView.render();
