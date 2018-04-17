@@ -2,10 +2,6 @@
 @import "common/variables";
 
 .timeline {
-  background-image: linear-gradient(to bottom right, $mid-grey 10%, white 40%);
-  background-attachment: fixed;
-  background-position: center;
-
   text {
     @include general-font;
   }
@@ -28,13 +24,8 @@
   }
 
   .social {
-    text-align: right;
+    padding-left: 20px;
     opacity: 0;
-    margin-right: 10px;
-
-    a:visited {
-      color: $dark-grey;
-    }
   }
 }
 

@@ -27,11 +27,14 @@ var app = app || {};
 
             var options = {
                 stringsElement: ".typed-strings",
-                typeSpeed: 50,
-                backDelay: 400,
+                typeSpeed: 30,
+                backDelay: 600,
                 smartBackspace: true,
                 onStringTyped: function () {
                     $('.typed-cursor').addClass("blink-me");
+                },
+                onComplete: function () {
+                    app.Dispatcher.trigger(app.Dispatcher.HELLO);
                 }
             };
 

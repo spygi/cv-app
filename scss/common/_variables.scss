@@ -9,9 +9,9 @@ $breakpoint-large: nth($breakpoints, 2);
 
 // colors
 $orange: hsl(30, 89.5%, 52.3%);
-$dark-grey: rgba(0, 0, 0, 0.8);
+$dark-grey: rgba(0, 0, 0, 0.75);
 $mid-grey: lighten($dark-grey, 70%);
 $light-grey: lighten($dark-grey, 90%);
 $dark-violet: hsl(255, 77%, 38%);
 $pink: hsl(324, 62%, 54%);
-
+$turquoise: hsl(152, 80%, 44%);

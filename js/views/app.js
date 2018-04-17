@@ -8,14 +8,17 @@ var app = app || {};
         el: '#cv-app',
 
         initialize: function (properties) {
-            app.HeaderView.render();
-            app.TimelineView.render();
-            var techView = new app.TechView(properties);
-            techView.render();
-            app.ProjectCollection.render();
+            this.techView = new app.TechView(properties);
         },
 
         render: function () {
+            app.HeaderView.render();
+            app.TimelineView.render();
+            this.techView.render();
+            app.ProjectCollection.render();
+
+            this.listenTo(app.Dispatcher, app.Dispatcher.HELLO, app.TimelineView.show);
+
             return this;
         }
     });

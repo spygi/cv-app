@@ -26,11 +26,11 @@
       "name": "Frontend & UX",
       "children": [
         {
-          "name": "HTML (5)",
+          "name": "HTML",
           "size": 100
         },
         {
-          "name": "(S)CSS (3)",
+          "name": "(S)CSS",
           "size": 100
         },
         {

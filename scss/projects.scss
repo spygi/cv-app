@@ -42,16 +42,11 @@
     }
     .more-links {
       text-align: right;
-      color: $orange;
 
       a {
-        color: inherit;
         font-size: 25px;
-
-        &:hover {
-          text-decoration: none;
-          border: 1px dashed $orange;
-        }
+        text-decoration: none;
+        color: $turquoise;
       }
     }
   }

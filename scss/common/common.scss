@@ -1,11 +1,13 @@
 @import "fonts";
+@import "variables";
 
 section, header {
   @include general-font;
+  padding: 20px 0 10px 0;
+  margin-bottom: 1px solid $dark-grey;
 
   h1 {
     margin: 0px;
-    padding: 20px 0 10px 0;
 
     @include title-font;
     font-size: 20px;
@@ -13,7 +15,7 @@ section, header {
   }
 
   a {
-    text-decoration: underline solid $orange;
+    text-decoration: underline solid $turquoise;
     text-decoration-skip-ink: none;
     color: inherit;
 

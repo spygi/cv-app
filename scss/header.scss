@@ -3,22 +3,21 @@
 @import "common/variables";
 
 header {
+  text-align: center;
+  width: 100%;
+
   h1 {
     @include title-font;
-    text-align: center;
-    font-size: 23px;
     margin: 20px 0 10px 0;
-    width: 210px; // this is in order to avoid resizing the container when the dynamic content (audio) is loaded
   }
 
   h2 {
     @include general-font;
-    font-size: 16px;
-    line-height: 1.8;
+    line-height: 1.5;
     margin-bottom: 0;
   }
 
-  .pronunciation{
+  .pronunciation {
     display: none;
     font-size: 15px;
   }

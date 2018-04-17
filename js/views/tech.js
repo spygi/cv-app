@@ -16,7 +16,7 @@ var app = app || {};
             var svg = d3.select(".tech svg"), margin = 20, diameter = +width, g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
             svg.attr("width", width); // set width
             svg.attr("height", width);
-            var color = d3.scaleLinear().domain([-1, 5]).range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"]).interpolate(d3.interpolateHcl);
+            var color = d3.scaleLinear().domain([-1, 5]).range(["hsla(324, 62%, 84%, 0)", "hsl(324, 62%, 84%)"]).interpolate(d3.interpolateHcl);
 
             var pack = d3.pack().size([diameter - margin, diameter - margin]).padding(2);
 

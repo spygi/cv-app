@@ -2,12 +2,14 @@
 
 @mixin general-font() {
   font-family: 'Helvetica Neue';
-  font-weight: 300;
+  font-weight: 400;
   color: $dark-grey;
+  font-size: 15px;
 }
 
 @mixin title-font() {
   font-family: 'Nunito Sans', sans-serif;
-  color: $orange;
-  letter-spacing: 2px;
+  color: $turquoise;
+  letter-spacing: 1px;
+  font-size: 23px;
 }

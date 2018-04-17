@@ -1,16 +1,18 @@
 @import "common/variables";
 
-.social {
-  display: flex;
-  justify-content: space-between;
+footer {
+  .social {
+    display: flex;
+    justify-content: space-between;
 
-  a {
-    font-size: 20px;
-    color: $dark-grey;
-    margin-right: 10px;
+    a {
+      font-size: 20px;
+      color: $dark-grey;
+      margin-right: 10px;
 
-    &:last-child {
-      margin-right: 0;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }

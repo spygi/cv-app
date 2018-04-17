@@ -1,8 +1,6 @@
-.tech {
-  h1 {
-    background-color: hsl(152, 80%, 80%);
-  }
+@import "common/fonts";
 
+.tech {
   .node {
     cursor: pointer;
   }
@@ -17,7 +15,7 @@
   }
 
   .label {
-    font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    @include general-font;
     text-anchor: middle;
     text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
   }

@@ -8,8 +8,6 @@
 @import "timeline";
 @import "header";
 @import "footer";
-@import "writing";
-@import "others";
 
 // medium and large screens
 @media screen and (min-width: $breakpoint-small) {
@@ -24,11 +22,14 @@
   }
 }
 
+#cv-app {
+  background-image: linear-gradient(to right, $light-grey 10%, whitesmoke 60%);
+}
+
 aside {
   display: flex;
   align-items: center;
   flex-flow: column nowrap;
-  background-color: whitesmoke;
 }
 
 #navigation {
