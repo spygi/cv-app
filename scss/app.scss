@@ -29,12 +29,6 @@ aside {
   flex-flow: column nowrap;
 }
 
-aside, .timeline {
-  // sharing a linear gradient across elements
-  background-image: linear-gradient(to bottom right, $mid-grey 10%, transparent 60%);
-  background-attachment: fixed;
-}
-
 #navigation {
   @media screen and (max-width: $breakpoint-small) {
     display: none;

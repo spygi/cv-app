@@ -2,6 +2,10 @@
 @import "common/variables";
 
 .timeline {
+  background-image: linear-gradient(to bottom right, $mid-grey 10%, white 40%);
+  background-attachment: fixed;
+  background-position: center;
+
   text {
     @include general-font;
   }
@@ -18,6 +22,7 @@
   .work {
     fill: $dark-violet;
   }
+
   .study {
     fill: $pink;
   }
