@@ -3,7 +3,8 @@
 var app = app || {};
 
 var properties = {
-    breakpointSmall: "480"
+    breakpointSmall: "480",
+    devEnvironment: document.location.href.match("localhost") !== false
 };
 
 $(function () {

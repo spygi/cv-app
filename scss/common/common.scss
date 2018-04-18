@@ -19,8 +19,17 @@ section, header {
     text-decoration-skip-ink: none;
     color: inherit;
 
+    i {
+      text-decoration-line: none;
+      color: $turquoise;
+    }
+
     &:visited {
       color: inherit;
+    }
+
+    &:hover {
+      text-decoration: $turquoise double underline;
     }
 
     &:last-child {

@@ -38,6 +38,11 @@ aside {
   }
 }
 
+.todo {
+  // apply to all WIP stuff
+  display: none;
+}
+
 #details {
   grid-area: 1 / 2 / 2 / 3;
   justify-self: center;

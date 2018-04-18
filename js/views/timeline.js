@@ -25,11 +25,17 @@ var app = app || {};
             }, 3500);
         },
 
-        render: function () {
+        render: function (properties) {
+            this.devEnvironment = properties.devEnvironment;
+
             // can't use JQuery for the following due to browsers filtering out <head> elements,
             // see https://stackoverflow.com/questions/6417157/jquery-selector-for-link-elements-in-head
             var link = document.querySelector('link[rel="import"]');
             $('.timeline .social').before(link.import.documentElement.getElementsByTagName('svg'));
+
+            if (this.devEnvironment) {
+                this.show();
+            }
 
             return this;
         }
