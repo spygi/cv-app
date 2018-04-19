@@ -4,8 +4,5 @@ var app = app || {};
 (function () {
     'use strict';
 
-    app.ProjectModel = Backbone.Model.extend({
-        defaults: {
-        }
-    });
+    app.ProjectModel = Backbone.Model.extend({});
 })();

@@ -12,17 +12,7 @@ var app = app || {};
         // matching element, and re-assign it to `el`. Otherwise, create
         // an element from the `id`, `className` and `tagName` properties.
         className: 'custom-card',
-
-        events: {
-            "click": function () {
-                // From Backbone docs: Omitting the selector binds the event to `this.el`.
-                this.el.classList.toggle("clicked");
-            }
-        },
-
-        mapIcons: {
-            "github": '<i class="fab fa-github"></i>'
-        },
+        tagName: 'a',
 
         initialize: function (options) {
             this.shortTemplate = $.Deferred();
@@ -30,8 +20,9 @@ var app = app || {};
             $.get("../../templates/projects.html", function (data) {
                 _this.shortTemplate.resolve(_.template($(data).html()));
             });
-
-            this.el.id = options.model.get("id") ? options.model.get("id") : "";
+            this.el.id = options.model.get("repoName") || "";
+            this.el.href = options.model.get("link") || "";
+            this.el.target = "_blank";
         },
 
         render: function () {
@@ -40,7 +31,6 @@ var app = app || {};
                 //this.$el.html(this.longTemplate(this.model.toJSON()));
             } else {
                 this.shortTemplate.done(function (template) {
-                    _this.model.set("icon", _this.mapIcons[_this.model.get("platform")]);
                     _this.$el.html(template(_this.model.toJSON()));
                 });
             }

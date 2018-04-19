@@ -1,24 +1,66 @@
 @import "common/variables";
-@import "common/custom-card.scss";
 @import "common/fonts";
 
 .projects {
   @include general-font;
-  color: antiquewhite;
 
-  a:visited {
-    color: antiquewhite;
+  h1 {
+    margin-bottom: 10px;
   }
-
   // small devices
   @media screen and (max-width: $breakpoint-small) {
+    .examples {
+      display: flex;
+      flex-direction: column;
+
+      .custom-card {
+        position: relative;
+        height: 200px;
+        background-size: cover;
+        margin: 0 0 10px 0;
+        // applying a 0 padding on last-child won't work correctly here because we re-arrange the children with flexbox
+        // justify-content on the container would not work as well without setting a fixed height on the container.
+      }
+
+      #timetrckr {
+        order: 1;
+        background-image: url("/assets/timetrckr.jpg");
+      }
+
+      #oceania-2017 {
+        order: 2;
+        background-image: url("https://github.com/spygi/oceania-2017/blob/master/out.gif?raw=true");
+      }
+
+      #cv-app {
+        order: 3;
+        background-image: url("/assets/mirror.png");
+      }
+
+      .info {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        color: whitesmoke;
+        font-size: 13px;
+        background-image: linear-gradient(to bottom, transparent 1%, black 80%);
+        padding: 0 10px 0 10px;
+      }
+
+      .tech {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  // big devices
+  @media screen and (min-width: $breakpoint-small) {
     .examples {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-gap: 1rem;
 
       .custom-card {
-        @include custom-card();
         background-color: $dark-grey;
         padding: 1rem;
 
@@ -39,66 +81,6 @@
           grid-area: 2 / 3 / 3 / 6;
         }
       }
-    }
-    .more-links {
-      text-align: right;
-
-      a {
-        font-size: 25px;
-        text-decoration: none;
-        color: $turquoise;
-      }
-    }
-  }
-
-  // medium devices
-  @media screen and (min-width: $breakpoint-small) {
-    .examples {
-      display: flex;
-      flex-direction: column;
-
-      > * {
-        border-bottom: 1px solid $gray-300;
-      }
-
-      .back {
-        // this rule is here only if a user resizes from small to medium, normally should happen when switching to landscape from portrait mode
-        display: none;
-      }
-
-      .meta {
-        display: flex;
-        align-items: baseline;
-        padding-bottom: 1rem;
-        justify-content: space-between;
-
-        .title-company {
-          flex: 0 0 auto;
-        }
-
-        .dates-location {
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          flex: 0 10 auto;
-        }
-      }
-
-      .read-more {
-        order: 10; // make it last
-        text-align: center;
-      }
-    }
-  }
-
-  .linkedin-logo {
-    vertical-align: sub;
-  }
-
-  #doodle-cto .description::after {
-    @media screen and (min-width: $breakpoint-large) {
-      content: " About engineering culture: I introduced regular 1-1s with all devs, sponsored education and workshop requests for developers, introduced a 360 review process (inspired by Google) which was eventually adopted by the rest of the company, advocated opening up Doodle’s API to external developers. Highlights on scaling the team: I proposed a new company structure (based on Spotify) which was accepted by the rest of management team, introduced a new hiring process, mentored team leads and proposed Doodle’s first career path for engineers. These enabled Doodle to double its web developers in a year while also integrating and instilling a healthy engineering culture across all remote offices (Zürich, Berlin, Tel Aviv).
- Highlights on technical work: introduced Scrum in the platform team, pushed further Doodle's move to the cloud, active monitoring of servers and better testing environments. These allowed Doodle to redesign its whole service and also experiment with new micro services and technologies, while maintaining a 99.999% availability level.";
     }
   }
 }
