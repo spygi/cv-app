@@ -24,20 +24,27 @@ var app = app || {};
         deferredModels: [],
 
         initialize: function () {
-            var clientId = "Iv1.2e4ec0b9f682f0fa", clientSecret = "8034c15fe685dc6acf38fa1d804b10d55cb95107";
-            var options = {
-                headers: "client_id=" + clientId + "&client_secret=" + clientSecret
-            };
+            var tkn = document.querySelector("meta[name='gh:token']").getAttribute('content');
             var _this = this;
             _.each(modelJson, function (model) {
                 var deferredDescription = $.Deferred(), deferredLanguages = $.Deferred(), deferredModel = $.Deferred();
 
-                $.get('https://api.github.com/repos/spygi/' + model.repoName, options).done(function (result) {
+                $.get({
+                    url: 'https://api.github.com/repos/spygi/' + model.repoName,
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader("Authorization", "token " + tkn)
+                    }
+                }).done(function (result) {
                     model.description = result.description || "";
                     deferredDescription.resolve(model);
                 });
 
-                $.get('https://api.github.com/repos/spygi/' + model.repoName + '/languages', options).done(function (result) {
+                $.get({
+                    url: 'https://api.github.com/repos/spygi/' + model.repoName + '/languages',
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader("Authorization", "token " + tkn)
+                    }
+                }).done(function (result) {
                     model.tech = [];
                     for ( var language in result) {
                         model.tech.push(language);
