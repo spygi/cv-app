@@ -24,31 +24,20 @@ var app = app || {};
         deferredModels: [],
 
         initialize: function () {
-            var token = "c9896b1c9d01d883d4bb457907bf9dee6b3ce714";
+            var clientId = "Iv1.2e4ec0b9f682f0fa", clientSecret = "8034c15fe685dc6acf38fa1d804b10d55cb95107";
             var options = {
-
+                headers: "client_id=" + clientId + "&client_secret=" + clientSecret
             };
-
             var _this = this;
             _.each(modelJson, function (model) {
                 var deferredDescription = $.Deferred(), deferredLanguages = $.Deferred(), deferredModel = $.Deferred();
 
-                $.get({
-                    url: 'https://api.github.com/repos/spygi/' + model.repoName,
-                    beforeSend: function (xhr) {
-                        xhr.setRequestHeader("Authorization", "token c9896b1c9d01d883d4bb457907bf9dee6b3ce714");
-                    }
-                }).done(function (result) {
+                $.get('https://api.github.com/repos/spygi/' + model.repoName, options).done(function (result) {
                     model.description = result.description || "";
                     deferredDescription.resolve(model);
                 });
 
-                $.get({
-                    url: 'https://api.github.com/repos/spygi/' + model.repoName + '/languages',
-                    beforeSend: function (xhr) {
-                        xhr.setRequestHeader("Authorization", "token c9896b1c9d01d883d4bb457907bf9dee6b3ce714");
-                    }
-                }).done(function (result) {
+                $.get('https://api.github.com/repos/spygi/' + model.repoName + '/languages', options).done(function (result) {
                     model.tech = [];
                     for ( var language in result) {
                         model.tech.push(language);
