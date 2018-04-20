@@ -24,28 +24,21 @@ var app = app || {};
         deferredModels: [],
 
         initialize: function () {
-            var tkn = "v1.c89711f8f5e5033aa495bccc11b1fef9e6c3ddd6";
             var _this = this;
             _.each(modelJson, function (model) {
                 var deferredDescription = $.Deferred(), deferredLanguages = $.Deferred(), deferredModel = $.Deferred();
 
                 $.get({
                     url: 'https://api.github.com/repos/spygi/' + model.repoName,
-                    beforeSend: function (xhr) {
-                        xhr.setRequestHeader("Authorization", "token " + tkn);
-                        xhr.setRequestHeader("Accept", "application/vnd.github.machine-man-preview+json");
-                    }
-                }).done(function (result) {
+                    cache: true
+                }).done(function (result, status, xhr) {
                     model.description = result.description || "";
                     deferredDescription.resolve(model);
                 });
 
                 $.get({
                     url: 'https://api.github.com/repos/spygi/' + model.repoName + '/languages',
-                    beforeSend: function (xhr) {
-                        xhr.setRequestHeader("Authorization", "token " + tkn);
-                        xhr.setRequestHeader("Accept", "application/vnd.github.machine-man-preview+json");
-                    }
+                    cache: true
                 }).done(function (result) {
                     model.tech = [];
                     for ( var language in result) {
