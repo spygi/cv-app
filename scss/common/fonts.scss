@@ -5,6 +5,7 @@
   font-weight: 400;
   color: $dark-grey;
   font-size: 15px;
+  line-height: 1.4;
 }
 
 @mixin title-font() {
@@ -12,4 +13,5 @@
   color: $turquoise;
   letter-spacing: 1px;
   font-size: 23px;
+  font-weight: 500;
 }
