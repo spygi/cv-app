@@ -6,6 +6,10 @@ header {
   text-align: center;
   width: 100%;
 
+  a {
+    text-decoration: none;
+  }
+
   h1 {
     @include title-font;
     margin: 20px 0 10px 0;

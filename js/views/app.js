@@ -17,6 +17,7 @@ var app = app || {};
             app.TimelineView.render(this.properties);
             this.techView.render();
             app.ProjectCollection.render();
+            app.FooterView.render();
 
             if (!this.properties.devEnvironment) {
                 this.listenToOnce(app.Dispatcher, app.Dispatcher.HELLO, app.TimelineView.show);

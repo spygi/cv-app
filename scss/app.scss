@@ -5,6 +5,7 @@
 @import "tech";
 @import "timeline";
 @import "header";
+@import "misc";
 @import "footer";
 
 // medium and large screens
@@ -44,16 +45,4 @@ aside {
 #details {
   grid-area: 1 / 2 / 2 / 3;
   justify-self: center;
-}
-
-footer {
-  @media screen and (min-width: 640px) {
-    grid-area: 2 / 2 / 3 / 3;
-    align-self: center;
-    justify-self: center;
-  }
-
-  @media screen and (max-width: 640px) {
-    text-align: center;
-  }
 }

@@ -1,10 +1,14 @@
 @import "fonts";
 @import "variables";
 
-section, header {
+section, header, footer {
   @include general-font;
-  padding: 20px 0 10px 0;
+  padding: 20px 0 20px 0;
   margin-bottom: 1px solid $dark-grey;
+
+  div {
+    padding: 0 20px 0 20px;
+  }
 
   h1 {
     margin: 0px;
@@ -14,22 +18,23 @@ section, header {
     text-align: center;
   }
 
+  i {
+    text-decoration-line: none;
+    color: $turquoise;
+    font: inherit;
+  }
+
   a {
     text-decoration: underline solid $turquoise;
     text-decoration-skip-ink: none;
     color: inherit;
-
-    i {
-      text-decoration-line: none;
-      color: $turquoise;
-    }
 
     &:visited {
       color: inherit;
     }
 
     &:hover {
-      text-decoration: $turquoise double underline;
+      text-decoration: inherit;
     }
 
     &:last-child {

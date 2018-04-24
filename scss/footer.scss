@@ -1,9 +1,26 @@
 @import "common/variables";
 
 footer {
+  @media screen and (min-width: 640px) {
+    grid-area: 2 / 2 / 3 / 3;
+    align-self: center;
+    justify-self: center;
+  }
+
   .social {
-    a {
-      font-size: 25px;
-    }
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  #about-name {
+    font-size: 11px;
+  }
+
+  .asterisk {
+    font-size: 16px;
+    color: $turquoise;
+
+    vertical-align: sub;
+    line-height: 0.1; // due to vertical-align this needs to be smaller than the value inherited, in order not to leave bigger line gaps
   }
 }

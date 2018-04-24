@@ -6,30 +6,12 @@ var app = app || {};
 
     app.HeaderView = Backbone.View.extend({
         render: function () {
-            $.post({
-                url: "https://api.soundoftext.com/sounds",
-                contentType: "application/json",
-                data: JSON.stringify({
-                    "engine": "Google",
-                    "data": {
-                        "text": "Σπύρος",
-                        "voice": "el-GR"
-                    }
-                }),
-                processData: false
-            }).done(function (result) {
-                $.get("https://api.soundoftext.com/sounds/" + result.id).done(function (result) {
-                    $(".pronunciation").click(function () {
-                        new Audio(result.location).play();
-                    }).show();
-                });
-            });
-
             var options = {
                 stringsElement: ".typed-strings",
                 typeSpeed: 30,
                 backDelay: 600,
                 smartBackspace: true,
+                cursorChar: "_",
                 onStringTyped: function () {
                     $('.typed-cursor').addClass("blink-me");
                 },

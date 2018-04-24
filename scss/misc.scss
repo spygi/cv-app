@@ -1,0 +1,28 @@
+@import "common/variables";
+
+.misc {
+  .emoji {
+    vertical-align: middle;
+  }
+
+  .snowboard:before {
+    content: "\01F3C2";
+  }
+
+  .surf:before {
+    content: "\01F3C4";
+  }
+
+  .tennis:before {
+    content: "\01F3BE";
+  }
+
+  .drums:before {
+    content: "\01F941";
+  }
+
+  iframe {
+    width: 100%;
+    height: 200px;
+  }
+}

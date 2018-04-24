@@ -2,16 +2,17 @@
 @import "common/fonts";
 
 .projects {
-  @include general-font;
-
   h1 {
     margin-bottom: 10px;
   }
+
   // small devices
   @media screen and (max-width: $breakpoint-small) {
     .examples {
       display: flex;
       flex-direction: column;
+
+      padding: 0;
 
       .custom-card {
         position: relative;
