@@ -21,17 +21,13 @@ header {
     margin-bottom: 0;
   }
 
-  .pronunciation {
-    display: none;
-    font-size: 15px;
-  }
-
   .typed-strings {
     display: none;
   }
 
   .blink-me {
     animation: blinker 0.8s linear infinite;
+    color: $turquoise;
   }
 
   @keyframes blinker {
