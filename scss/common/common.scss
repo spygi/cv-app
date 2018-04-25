@@ -25,11 +25,6 @@ section, header, footer {
 
     @include title-font;
     text-align: center;
-
-    @media screen and (min-width: $breakpoint-small) {
-      text-align: left;
-      padding-left: $general-padding;
-    }
   }
 
   i {

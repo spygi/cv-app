@@ -7,8 +7,15 @@
   }
 
   @media screen and (min-width: $breakpoint-small) {
+    padding-top: 0;
+
     grid-column: 1/6;
     grid-row: 4/6;
+
+    h1 {
+      text-align: left;
+      padding-left: $general-padding;
+    }
   }
 
   .examples {
@@ -25,7 +32,7 @@
 
       position: relative;
       background-image: linear-gradient(to bottom, hsl(324, 62%, 95%) 20%, hsl(30, 89.5%, 86%) 60%, hsl(30, 89.5%, 68%) 95%);
-      height: 200px;
+      height: $small-card-height;
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -36,7 +43,7 @@
 
       &:before {
         position: absolute;
-        font-size: 200px;
+        font-size: $small-card-height;
         opacity: 0.1;
         width: 100%;
         text-align: center;
@@ -72,7 +79,6 @@
     }
 
     .info {
-      font-size: 13px;
       padding: 0 $half-general-padding 0 $half-general-padding;
     }
 
@@ -88,6 +94,11 @@
       .custom-card {
         background-color: $dark-grey;
         margin: 0; // unset margin because we have the grip-gap
+        height: $large-card-height;
+
+        &:before {
+          font-size: $large-card-height;
+        }
 
         // flexbox would be more appropriate here maybe
         &:nth-child(1) {
