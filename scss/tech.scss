@@ -25,4 +25,9 @@
   .node--leaf {
     pointer-events: none;
   }
+
+  @media screen and (min-width: $breakpoint-small) {
+    grid-column: 3/6;
+    grid-row: 2/4;
+  }
 }

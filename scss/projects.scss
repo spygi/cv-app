@@ -3,58 +3,57 @@
 
 .projects {
   h1 {
-    margin-bottom: 10px;
+    margin-bottom: $half-general-padding;
   }
 
-  // small devices
-  @media screen and (max-width: $breakpoint-small) {
-    .examples {
-      display: flex;
-      flex-direction: column;
-
-      .custom-card {
-        position: relative;
-        height: 200px;
-        background-size: cover;
-        margin: 0 0 10px 0;
-        // applying a 0 padding on last-child won't work correctly here because we re-arrange the children with flexbox
-        // justify-content on the container would not work as well without setting a fixed height on the container.
-      }
-
-      #timetrckr {
-        order: 1;
-        background-image: url("/assets/timetrckr.jpg");
-      }
-
-      #oceania-2017 {
-        order: 2;
-        background-image: url("https://github.com/spygi/oceania-2017/blob/master/out.gif?raw=true");
-      }
-
-      #cv-app {
-        order: 3;
-        background-image: url("/assets/mirror.png");
-      }
-
-      .info {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        color: whitesmoke;
-        font-size: 13px;
-        background-image: linear-gradient(to bottom, transparent 1%, black 80%);
-        padding: 0 10px 0 10px;
-      }
-
-      .tech {
-        margin-top: 10px;
-      }
-    }
-  }
-
-  // big devices
   @media screen and (min-width: $breakpoint-small) {
-    .examples {
+    grid-column: 1/6;
+    grid-row: 4/6;
+  }
+
+  .examples {
+    display: flex;
+    flex-direction: column;
+
+    .custom-card {
+      position: relative;
+      height: 200px;
+      background-size: cover;
+      margin: 0 0 $half-general-padding 0;
+      // applying a 0 padding on last-child won't work correctly here because we re-arrange the children with flexbox
+      // justify-content on the container would not work as well without setting a fixed height on the container.
+    }
+
+    #timetrckr {
+      order: 1;
+      background-image: url("/assets/timetrckr.jpg");
+    }
+
+    #oceania-2017 {
+      order: 2;
+      background-image: url("https://github.com/spygi/oceania-2017/blob/master/out.gif?raw=true");
+    }
+
+    #cv-app {
+      order: 3;
+      background-image: url("/assets/mirror.png");
+    }
+
+    .info {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      color: whitesmoke;
+      font-size: 13px;
+      background-image: linear-gradient(to bottom, transparent 1%, black 80%);
+      padding: 0 $half-general-padding 0 $half-general-padding;
+    }
+
+    .tech {
+      margin-top: $half-general-padding;
+    }
+
+    @media screen and (min-width: $breakpoint-small) {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-gap: 1rem;

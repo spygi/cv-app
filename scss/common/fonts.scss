@@ -4,8 +4,11 @@
   font-family: 'Helvetica Neue';
   font-weight: 400;
   color: $dark-grey;
-  font-size: 15px;
   line-height: 1.4;
+
+  @media screen and (min-width: $breakpoint-small) {
+    line-height: 1.6;
+  }
 }
 
 @mixin title-font() {
@@ -14,4 +17,8 @@
   letter-spacing: 1px;
   font-size: 23px;
   font-weight: 500;
+
+  @media screen and (min-width: $breakpoint-small) {
+    font-size: 25px;
+  }
 }

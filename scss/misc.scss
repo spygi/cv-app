@@ -25,4 +25,9 @@
     width: 100%;
     height: 200px;
   }
+
+  @media screen and (min-width: $breakpoint-small) {
+    grid-column: 3/6;
+    grid-row: 6/8;
+  }
 }

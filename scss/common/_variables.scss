@@ -1,8 +1,6 @@
-
-// breakpoints
-$breakpoints: "480px", "1047px";
-$breakpoint-small: nth($breakpoints, 1);
-$breakpoint-large: nth($breakpoints, 2);
+$breakpoint-small: "480px";
+$general-padding: 1rem;
+$half-general-padding: $general-padding/2;
 
 // colors
 $orange: hsl(30, 89.5%, 52.3%);
