@@ -4,8 +4,6 @@ var app = app || {};
 (function ($) {
     'use strict';
 
-    var breakpointSmall = 480; // taken from CSS
-
     app.ProjectView = Backbone.View.extend({
         // From Backbone comments:
         // If `this.el` is a string, pass it through `$()`, take the first
@@ -15,10 +13,10 @@ var app = app || {};
         tagName: 'a',
 
         initialize: function (options) {
-            this.shortTemplate = $.Deferred();
+            this.template = $.Deferred();
             var _this = this;
             $.get("../../templates/projects.html", function (data) {
-                _this.shortTemplate.resolve(_.template($(data).html()));
+                _this.template.resolve(_.template($(data).html()));
             });
             this.el.id = options.model.get("repoName") || "";
             this.el.href = options.model.get("link") || "";
@@ -27,13 +25,9 @@ var app = app || {};
 
         render: function () {
             var _this = this;
-            if (window.outerWidth > breakpointSmall) {
-                //this.$el.html(this.longTemplate(this.model.toJSON()));
-            } else {
-                this.shortTemplate.done(function (template) {
+                this.template.done(function (template) {
                     _this.$el.html(template(_this.model.toJSON()));
                 });
-            }
             return this;
         }
     });

@@ -29,5 +29,11 @@
   @media screen and (min-width: $breakpoint-small) {
     grid-column: 3/6;
     grid-row: 2/4;
+
+    justify-self: stretch;
+
+    .label {
+      font-size:15px;
+    }
   }
 }

@@ -15,7 +15,8 @@ section, header, footer {
     padding-bottom: $half-general-padding;
   }
 
-  div {
+  // apply to direct children only!
+  > div {
     padding: 0 $general-padding 0 $general-padding;
   }
 

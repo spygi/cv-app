@@ -14,38 +14,65 @@
   .examples {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
 
     .custom-card {
+      text-decoration-line: none;
+
+      display: flex; // a flex inside a flex/grid
+      flex-direction: column;
+      justify-content: flex-end;
+
       position: relative;
+      background-image: linear-gradient(to bottom, hsl(324, 62%, 95%) 20%, hsl(30, 89.5%, 86%) 60%, hsl(30, 89.5%, 68%) 95%);
       height: 200px;
       background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+
       margin: 0 0 $half-general-padding 0;
       // applying a 0 padding on last-child won't work correctly here because we re-arrange the children with flexbox
       // justify-content on the container would not work as well without setting a fixed height on the container.
+
+      &:before {
+        position: absolute;
+        font-size: 200px;
+        opacity: 0.1;
+        width: 100%;
+        text-align: center;
+        line-height: 1;
+        font-family: Font Awesome\ 5 Free;
+      }
     }
 
     #timetrckr {
       order: 1;
-      background-image: url("/assets/timetrckr.jpg");
+
+      &:before {
+        content: "\f017";
+      }
     }
 
     #oceania-2017 {
       order: 2;
-      background-image: url("https://github.com/spygi/oceania-2017/blob/master/out.gif?raw=true");
+
+      &:before {
+        content: "\f3c5";
+        font-weight: 900; // not sure why this is needed
+      }
     }
 
     #cv-app {
       order: 3;
-      background-image: url("/assets/mirror.png");
+
+      &:before {
+        content: "\f02a";
+        font-weight: 900; // not sure why this is needed
+      }
     }
 
     .info {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      color: whitesmoke;
       font-size: 13px;
-      background-image: linear-gradient(to bottom, transparent 1%, black 80%);
       padding: 0 $half-general-padding 0 $half-general-padding;
     }
 
@@ -56,11 +83,11 @@
     @media screen and (min-width: $breakpoint-small) {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-gap: 1rem;
+      grid-gap: $half-general-padding;
 
       .custom-card {
         background-color: $dark-grey;
-        padding: 1rem;
+        margin: 0; // unset margin because we have the grip-gap
 
         // flexbox would be more appropriate here maybe
         &:nth-child(1) {
