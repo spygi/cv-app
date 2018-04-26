@@ -6,17 +6,19 @@ var app = app || {};
 
     var modelJson = [{
         title: "Timetrckr",
-        repoName: "timetrckr",
-        link: "https://github.com/spygi/timetrckr"
+        repoName: "timetrckr"
     }, {
         title: "Your pics on a map",
         repoName: "oceania-2017",
-        additional: "Google Maps API, Github pages",
-        link: "https://github.com/spygi/oceania-2017"
+        additional: "Google Maps API, Github pages"
     }, {
         title: "This site",
         repoName: "cv-app",
         additional: "BackboneJS, Github API, TravisCI, Heroku"
+    }, {
+        title: "Stream Youtube to a RaspberryPi",
+        repoName: "raspberry-youtube",
+        additional: "Chrome API"
     }];
 
     var ProjectCollection = Backbone.Collection.extend({

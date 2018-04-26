@@ -69,12 +69,23 @@
       }
     }
 
+
+
     #cv-app {
       order: 3;
 
       &:before {
         content: "\f02a";
-        font-weight: 900; // not sure why this is needed
+        font-weight: 900;
+      }
+    }
+
+    #raspberry-youtube {
+      order: 4;
+
+      &:before {
+        content: "\f025";
+        font-weight: 900;
       }
     }
 

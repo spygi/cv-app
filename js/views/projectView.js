@@ -19,7 +19,7 @@ var app = app || {};
                 _this.template.resolve(_.template($(data).html()));
             });
             this.el.id = options.model.get("repoName") || "";
-            this.el.href = options.model.get("link") || "";
+            this.el.href = "https://github.com/spygi/" + options.model.get("repoName");
             this.el.target = "_blank";
         },
 
