@@ -33,12 +33,14 @@
     color: $pink;
     top: 4rem;
     right: 1rem;
-    font-size: 12px;
+    font-size: 15px;
+    font-family: 'Caveat', cursive;
 
     &:before {
       font-family: Font Awesome\ 5 Free;
       content: "\f309";
       font-weight: 900;
+      font-size: 12px;
     }
   }
 
@@ -56,8 +58,7 @@
       top: auto; // reset the value from the small viewport
       bottom: 2rem;
       left: -1rem;
-
-      font-size: 14px;
+      font-size: 18px;
 
       &:before {
         content: '';
