@@ -23,6 +23,7 @@
     opacity: 0.9; // to make it stand out less
 
     box-sizing: border-box;
+    padding: 0 $general-padding 0 $general-padding;
   }
 
   @media screen and (min-width: $breakpoint-small) {
@@ -35,6 +36,7 @@
 
     iframe {
       height: $large-card-height;
+      padding: 0; // override
     }
   }
 }

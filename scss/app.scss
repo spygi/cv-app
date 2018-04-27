@@ -25,7 +25,7 @@ html {
   // for screens != small
   @media screen and (min-width: $breakpoint-small) {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr 1fr;
     grid-row-gap: 2rem;
     grid-column-gap: 2rem;
   }
