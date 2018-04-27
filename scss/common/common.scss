@@ -22,6 +22,10 @@ section, header, footer {
   // apply to direct children only!
   > div {
     padding: 0 $general-padding 0 $general-padding;
+
+    @media screen and (min-width: $breakpoint-small) {
+      padding: 0;
+    }
   }
 
   h1 {

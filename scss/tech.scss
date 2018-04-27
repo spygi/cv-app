@@ -43,10 +43,8 @@
   }
 
   @media screen and (min-width: $breakpoint-small) {
-    grid-column: 4/6;
+    grid-column: 5/7;
     grid-row: 2/4;
-
-    padding-right: $general-padding;
 
     justify-self: stretch;
 
@@ -55,7 +53,7 @@
     }
 
     .click-on-me {
-      top: auto; // reset the value for the small viewport
+      top: auto; // reset the value from the small viewport
       bottom: 2rem;
       left: -1rem;
 
@@ -70,7 +68,6 @@
         content: " \f30c";
         font-weight: 900;
       }
-
     }
   }
 }
