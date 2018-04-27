@@ -15,7 +15,7 @@ var app = app || {};
             // mostly copied over https://bl.ocks.org/mbostock/7607535
             var svg = d3.select(".tech svg"), margin = 20, diameter = +width, g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
             svg.attr("viewBox", "0 0 " + width + " " + width );
-            var color = d3.scaleLinear().domain([-1, 5]).range(["hsla(324, 62%, 84%, 0)", "hsl(324, 62%, 84%)"]).interpolate(d3.interpolateHcl);
+            var color = d3.scaleLinear().domain([-1, 5]).range(["rgba(0, 0, 0, 0)", "hsl(255, 77%, 76%)"]).interpolate(d3.interpolateHcl);
 
             var pack = d3.pack().size([diameter - margin, diameter - margin]).padding(2);
 

@@ -16,9 +16,9 @@ var app = app || {};
         repoName: "cv-app",
         additional: "BackboneJS, Github API, TravisCI, Heroku"
     }, {
-        title: "Stream Youtube to a RaspberryPi",
+        title: "RaspberryPi streamer",
         repoName: "raspberry-youtube",
-        additional: "Chrome API"
+        additional: "Chrome Extensions API"
     }];
 
     var ProjectCollection = Backbone.Collection.extend({

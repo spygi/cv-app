@@ -1,6 +1,10 @@
 @import "common/variables";
 
 .writing {
+  .construction:before {
+    content: '\01F6A7';
+  }
+
   @media screen and (min-width: $breakpoint-small) {
     grid-column: 1/3;
     grid-row: 6/7;

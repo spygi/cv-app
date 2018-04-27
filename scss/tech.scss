@@ -1,6 +1,8 @@
 @import "common/fonts";
 
 .tech {
+  position: relative;
+
   .node {
     cursor: pointer;
   }
@@ -26,14 +28,49 @@
     pointer-events: none;
   }
 
+  .click-on-me {
+    position: absolute;
+    color: $pink;
+    top: 4rem;
+    right: 1rem;
+    font-size: 12px;
+
+    &:before {
+      font-family: Font Awesome\ 5 Free;
+      content: "\f309";
+      font-weight: 900;
+    }
+  }
+
   @media screen and (min-width: $breakpoint-small) {
-    grid-column: 3/6;
+    grid-column: 4/6;
     grid-row: 2/4;
+
+    padding-right: $general-padding;
 
     justify-self: stretch;
 
     .label {
-      font-size:15px;
+      font-size: 15px;
+    }
+
+    .click-on-me {
+      top: auto; // reset the value for the small viewport
+      bottom: 2rem;
+      left: -1rem;
+
+      font-size: 14px;
+
+      &:before {
+        content: '';
+      }
+
+      &:after {
+        font-family: Font Awesome\ 5 Free;
+        content: " \f30c";
+        font-weight: 900;
+      }
+
     }
   }
 }

@@ -6,6 +6,10 @@
   display: none;
 }
 
+.emoji {
+  vertical-align: middle;
+}
+
 section, header, footer {
   @include general-font;
   padding: $general-padding 0 $general-padding 0;
@@ -29,12 +33,12 @@ section, header, footer {
 
   i {
     text-decoration-line: none;
-    color: $turquoise;
+    color: $accent-color;
     font: inherit;
   }
 
   a {
-    text-decoration: underline solid $turquoise;
+    text-decoration: underline solid $accent-color;
     text-decoration-skip-ink: none;
     color: inherit;
 

@@ -6,6 +6,10 @@
     margin-bottom: $half-general-padding;
   }
 
+  .more-links {
+    margin-top: $half-general-padding;
+  }
+
   @media screen and (min-width: $breakpoint-small) {
     padding-top: 0;
 
@@ -31,14 +35,11 @@
       justify-content: flex-end;
 
       position: relative;
-      background-image: linear-gradient(to bottom, hsl(324, 62%, 95%) 20%, hsl(30, 89.5%, 86%) 60%, hsl(30, 89.5%, 68%) 95%);
+      background-color: $yellow;
       height: $small-card-height;
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
 
       margin: 0 0 $half-general-padding 0;
-      // applying a 0 padding on last-child won't work correctly here because we re-arrange the children with flexbox
+      // applying a 0 margin on last-child won't work correctly here because we re-arrange the children with flexbox
       // justify-content on the container would not work as well without setting a fixed height on the container.
 
       &:before {
@@ -69,8 +70,6 @@
       }
     }
 
-
-
     #cv-app {
       order: 3;
 
@@ -82,6 +81,7 @@
 
     #raspberry-youtube {
       order: 4;
+      margin-bottom: 0; // but this should work
 
       &:before {
         content: "\f025";
@@ -103,7 +103,6 @@
       grid-gap: $half-general-padding;
 
       .custom-card {
-        background-color: $dark-grey;
         margin: 0; // unset margin because we have the grip-gap
         height: $large-card-height;
 

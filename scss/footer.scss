@@ -12,7 +12,7 @@ footer {
 
   .asterisk {
     font-size: 16px;
-    color: $turquoise;
+    color: $accent-color;
 
     vertical-align: sub;
     line-height: 0.1; // due to vertical-align this needs to be smaller than the value inherited, in order not to leave bigger line gaps

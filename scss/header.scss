@@ -26,7 +26,7 @@ header {
 
   .blink-me {
     animation: blinker 0.8s linear infinite;
-    color: $turquoise;
+    color: $accent-color;
 
     @keyframes blinker {
       50% {

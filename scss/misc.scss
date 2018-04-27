@@ -1,10 +1,6 @@
 @import "common/variables";
 
 .misc {
-  .emoji {
-    vertical-align: middle;
-  }
-
   .snowboard:before {
     content: "\01F3C2";
   }
@@ -24,9 +20,9 @@
   iframe {
     width: 100%;
     height: $small-card-height;
-    opacity: 0.6; // to make it stand out less
+    opacity: 0.9; // to make it stand out less
 
-    padding: 0 $half-general-padding 0 $half-general-padding;
+    padding: 0 $general-padding 0 $general-padding;
     box-sizing: border-box;
   }
 
