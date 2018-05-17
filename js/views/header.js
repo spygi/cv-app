@@ -9,7 +9,7 @@ var app = app || {};
             var options = {
                 stringsElement: ".typed-strings",
                 typeSpeed: 30,
-                backDelay: 600,
+                backDelay: 1000,
                 smartBackspace: true,
                 cursorChar: "_",
                 onStringTyped: function () {
