@@ -28,14 +28,11 @@ var app = app || {};
         render: function (properties) {
             this.devEnvironment = properties.devEnvironment;
 
-            // can't use JQuery for the following due to browsers filtering out <head> elements,
-            // see https://stackoverflow.com/questions/6417157/jquery-selector-for-link-elements-in-head
-            var link = document.querySelector('link[rel="import"]');
-            $('.timeline .social').before(link.import.documentElement.getElementsByTagName('svg'));
-
-            if (this.devEnvironment) {
-                this.show();
-            }
+            var that = this;
+            $('#timeline-placeholder').load('../../templates/timeline.html', function () {
+                that.show();
+                return that;
+            });
 
             return this;
         }
